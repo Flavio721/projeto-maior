@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Sriracha&display=swap'); /* Poppins */ 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Sriracha&display=swap'); /* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Kaushan+Script&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Sriracha&display=swap'); /* Merriweather */ 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Kaushan+Script&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Sriracha&display=swap'); /* Quicksand */
+
+/*
+Cor1 : #0077b6 Cabeçalhos e botôes principais
+Cor2: #00b4d8 Destaque, detalhes e links
+Cor3 : #f8f9fa Fundo principal, contraste com azul
+Cor4: #90e0ef Elementos de apoio, ícones, seções especiais
+Cor5 : #edf6f9 Seções com textos longos, fundo 
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+nav{
+    background-image: linear-gradient(to right, #90e0ef, #00b4d8);
+    padding-top: 15px;
+    display: flex;
+    flex-flow: row-reverse;
+}
+nav > a{
+    width: 62px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    transition-duration: 0.5s;
+}
+nav > .maior{
+    width: 80px;
+}
+nav > a:hover{
+    background-color: white;
+    color: #00b4d8;
+}
+
+main > .topo{
+    padding: 10px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    height: 650px;
+    background-image: linear-gradient(to right, #90e0ef, #00b4d8);
+    
+    width: 99vw;
+}
+.topo > .texto{
+    width: 50%;
+}
+.texto > h1{
+    padding-bottom: 10px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5em;
+}
+.texto > p{
+    width: 70%;
+    text-align: justify;
+    padding-top: 10px;
+    font-family: "Raleway", sans-serif;
+    color: #edf6f9;
+    font-size: 1.5em;
+}
+.imagem > img{
+    height: 300px;
+    width: 500px;
+}
+
+.meio{
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px; 
+    height: 700px;
+}
+.meio > h2{
+    font-family: "Quicksand", sans-serif;
+    font-size: 3em;
+    color: #0077b6;
+    margin-left: 10px;
+}
+div > li{
+    color: #00b4d8;
+    font-family: "Raleway";
+    padding: 10px;
+    font-size: 1.6em;
+}
+div > p{
+    font-size: 1.4em;
+    width: 600px;
+}
+main > .final{
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #90e0ef;
+    height: 400px;
+    
+}
+.final > h2{
+    color: #0077b6;
+    font-family: "Poppins", sans-serif;
+    font-size: 3em;
+}
+.final > p{
+    font-family: "Raleway";
+    padding: 10px;
+    text-align: justify;
+    width: 500px;
+    color: white;
+    font-size: 1.2em;
+}
+.final > a{
+    text-decoration: none;
+    background-color: #0077b6;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    transition-duration: 0.5s;
+}
+.final > a:hover{
+    background-color: white;
+    color: #00b4d8;
+}

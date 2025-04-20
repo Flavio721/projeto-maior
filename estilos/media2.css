@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 768px) {
+    
+    body, html{
+        width: 100vw;
+        overflow-x: hidden;
+        
+    }
+    nav{
+        width: 100%;
+    }
+    main > .topo{
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 720px;
+        width: 100vw;
+    }
+    .topo > .texto{
+        width: 100%;
+    }
+    .imagem > img{
+        display: none;
+    }
+    .topo > .texto{
+        width: 70%;
+    }
+    .texto > h1{
+        font-size: 3em;
+    }
+    .texto > .inicio{
+        padding-left: 10px;
+        width: 90%;
+        font-size: 1.2em;
+
+    }
+    .meio{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .meio > div > p{
+        font-size: 1em;
+        width: 60%;
+        left: 50px;
+        top:  50px;
+        transform: translate(25%, 20%);
+        text-align: justify;
+    }
+    .meio > div > li{
+        font-size: 1.2em;
+        left: 50px;
+        top:  50px;
+        transform: translate(15%, 20%);
+        margin-top: 5px;
+        padding-bottom: 0px;
+    }
+    .meio > h2{
+        font-size: 3em;
+    }
+    .final > p{
+        width: 300px;
+    }
+    .final > h2{
+        font-size: 2.5em ;
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        width: 100vw;
+    }
+    main > .topo{
+        height: 780px;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    .topo > .texto{
+        width: 100%;
+        align-items: center;
+        justify-content: center ;
+    }
+    .topo > .imagem{
+        display: none;
+    }
+    .texto > h1{
+        font-size: 3.5em;
+        left: 50px;
+        top:  50px;
+        transform: translate(25%, 20%);
+    }
+    .texto > p{
+        font-size: 1.5em;
+        width: 70%;
+        left: 50px;
+        top:  50px;
+        transform: translate(20%, 10%);
+    }
+    div > p{
+        width: 300px;
+        font-size: 1.2em;
+    }
+}
