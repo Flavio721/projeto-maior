@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Sriracha&display=swap'); /* Poppins */ 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Sriracha&display=swap'); /* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Kaushan+Script&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Sriracha&display=swap'); /* Merriweather */ 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Boldonse&family=Kaushan+Script&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Sriracha&display=swap'); /* Quicksand */
+
+/*
+Cor1 : #0077b6 Cabeçalhos e botôes principais
+Cor2: #00b4d8 Destaque, detalhes e links
+Cor3 : #f8f9fa Fundo principal, contraste com azul
+Cor4: #90e0ef Elementos de apoio, ícones, seções especiais
+Cor5 : #edf6f9 Seções com textos longos, fundo 
+#a2cdf7;
+*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    overflow-x: hidden;
+    background-image: linear-gradient(to right, #a2cdf7, #f8f9fa);
+}
+main{
+    padding: 10px;
+}
+main > section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section > .esquerda{
+    padding: 40px;
+}
+.esquerda > h1{
+    font-size: 2.5em;
+    font-family: "Poppins", sans-serif;
+    color: #0077b6;
+    width: 500px;
+}
+.esquerda > p{
+    width: 300px;
+    text-align: justify;
+    margin-top: 10px;
+    font-family: "Quicksand", sans-serif;
+    
+}
+.direita > form{
+    background-color: #00b4d8;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+form > .campo{
+    border-radius: 10px;
+}
+.campo > label{
+    display: none;
+}
+.campo > input{
+    margin: 10px;
+    padding: 2px;
+    border: 0px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.campo > span{
+    width: 15px;
+    transform: translateY(30%);
+    color: white;
+}
+form > a{
+    text-decoration: none;
+    background-color: #0077b6;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8em;
+    transition: 0.5s;
+}
+form > a:hover{
+    background-color: white;
+    color: #0077b6;
+}

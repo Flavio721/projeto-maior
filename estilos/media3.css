@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+        background-color: #a2cdf7;
+    }
+    main > section{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    section > .esquerda{
+        padding: 10px;
+        left: 50px;
+        top: 50px;
+        transform: translateX();
+    }
+    .esquerda > h1{
+        font-size: 2em;
+        padding-top: 10px;
+        width: 300px;
+        left: 100px;
+        top: 50px;
+        transform: translateX(20px);
+    }
+    .esquerda > p{
+        font-size: 1em;
+        left: 50px;
+        top: 50px;
+        transform: translateX(10px);
+    }
+    .direita > form{
+     height: 200px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px) {
+    main > section{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: -10px;
+    }
+    .esquerda > p{
+        transform: translateX(100px);
+        padding: -10px;
+    }
+    .esquerda > h1{
+        transform: translateX(20px);
+        text-align: center;
+    }
+}
