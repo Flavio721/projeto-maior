@@ -137,3 +137,8 @@ main > .final{
     background-color: white;
     color: #00b4d8;
 }
+#botao{
+    padding: 10px;
+    margin-left: 5px;
+    width: 100px;
+}

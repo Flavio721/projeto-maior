@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancelar Reunião com Popup</title>
+  <style>
+    /* Estilo das reuniões */
+    .reuniao {
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+
+    /* Estilo do botão principal */
+    #abrirModal {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #abrirModal:hover {
+      background-color: #0056b3;
+    }
+
+    /* Estilo do modal */
+    .modal {
+      display: none; /* Oculto por padrão */
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 300px;
+    }
+
+    .btn-cancelar {
+      background-color: #d9534f;
+      color: white;
+      padding: 6px 10px;
+      border: none;
+      cursor: pointer;
+      float: right;
+    }
+
+    .btn-fechar {
+      float: right;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: #aaa;
+    }
+
+    .btn-fechar:hover {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Minhas Reuniões</h2>
+
+  <div id="listaReunioes">
+    <div class="reuniao" id="reuniao1">Reunião 1 - Segunda 14h</div>
+    <div class="reuniao" id="reuniao2">Reunião 2 - Terça 10h</div>
+    <div class="reuniao" id="reuniao3">Reunião 3 - Quarta 16h</div>
+  </div>
+
+  <button id="abrirModal">Cancelar Reunião</button>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="btn-fechar" onclick="fecharModal()">×</button>
+      <h3>Escolha a reunião para cancelar</h3>
+      <ul id="listaModal">
+        <!-- Reuniões serão copiadas para cá -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal() {
+      const modal = document.getElementById("modal");
+      const listaModal = document.getElementById("listaModal");
+      listaModal.innerHTML = ""; // Limpa lista anterior
+
+      // Pega todas as reuniões ativas
+      const reunioes = document.querySelectorAll("#listaReunioes .reuniao");
+
+      reunioes.forEach(reuniao => {
+        const li = document.createElement("li");
+        li.textContent = reuniao.textContent;
+
+        const btn = document.createElement("button");
+        btn.textContent = "Cancelar";
+        btn.className = "btn-cancelar";
+        btn.onclick = () => {
+          reuniao.remove(); // Remove da lista principal
+          fecharModal();
+        };
+
+        li.appendChild(btn);
+        listaModal.appendChild(li);
+      });
+
+      modal.style.display = "block";
+    }
+
+    function fecharModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    // Fecha modal ao clicar fora do conteúdo
+    window.onclick = function(event) {
+      const modal = document.getElementById("modal");
+      if (event.target === modal) {
+        fecharModal();
+      }
+    }
+
+    document.getElementById("abrirModal").onclick = abrirModal;
+  </script>
+
+</body>
+</html>

@@ -25,16 +25,13 @@ body, html{
     background-image: linear-gradient(to right, #a2cdf7, #f8f9fa);
 }
 main{
-    padding: 10px;
-}
-main > section{
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-section > .esquerda{
+main > .esquerda{
     padding: 40px;
 }
 .esquerda > h1{
@@ -42,10 +39,10 @@ section > .esquerda{
     font-family: "Poppins", sans-serif;
     color: #0077b6;
     width: 500px;
+    text-align: center;
 }
 .esquerda > p{
-    width: 300px;
-    text-align: justify;
+    width: 400px;
     margin-top: 10px;
     font-family: "Quicksand", sans-serif;
     
@@ -92,4 +89,7 @@ form > a{
 form > a:hover{
     background-color: white;
     color: #0077b6;
+}
+#botao{
+    padding: 10px;
 }
